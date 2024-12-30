@@ -1,4 +1,5 @@
 node_modules
+typesense-data
 
 # Output
 .output

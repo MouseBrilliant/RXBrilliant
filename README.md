@@ -1,38 +1,35 @@
-# sv
+# RX Brilliant
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Find best roblox experiences curated by the community at [RX Brilliant](https://rxbrilliant.com)
 
-## Creating a project
+## Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+Framework: SvelteKit-TS, Tailwind
+UI: shadcn/ui
+DB: Redis Full Stack
+Search Engine: Typesense
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
+Other: vite, bunjs, docker compose
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've clone this project and installed dependencies with `bun install` start a development server:
 
 ```bash
-npm run dev
+bun run dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run dev -- --open
 ```
 
 ## Building
 
-To create a production version of your app:
+To create a production version:
 
 ```bash
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `bun run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Contributing

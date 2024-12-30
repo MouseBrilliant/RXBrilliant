@@ -1,0 +1,42 @@
+# This version is for locally testing
+# It's much more convinient to just have these
+# run while testing / development
+# don't need keep building the site every time
+name: RXBrilliant-Development
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: 'example'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: 'mrmouse2405@gmail.com'
+  #     PGADMIN_DEFAULT_PASSWORD: 'admin'
+  #   ports:
+  #     - '8000:80'
+  #   volumes:
+  #     - pgadmin-data:/data
+  #   depends_on:
+  #     - postgres
+
+  typesense:
+    image: typesense/typesense:27.1
+    restart: on-failure
+    ports:
+      - '8108:8108'
+    volumes:
+      - typesense:/data
+    command: '--data-dir /data --api-key=xyz --enable-cors'
+
+volumes:
+  pgdata:
+  typesense:
+  pgadmin-data:
